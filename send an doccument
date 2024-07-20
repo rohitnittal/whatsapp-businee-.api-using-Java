@@ -1,0 +1,8 @@
+OkHttpClient client = new OkHttpClient();
+RequestBody body = new FormBody.Builder() 
+       .add("token", "YourToken")
+       .add("to", "16315555555")
+       .add("document", "https://alvochat-example.s3-accelerate.amazonaws.com/document/1.pdf")
+       .add("filename", "")
+       .add("priority", "")
+       .
