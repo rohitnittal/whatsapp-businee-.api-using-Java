@@ -1,0 +1,22 @@
+OkHttpClient client = new OkHttpClient();
+RequestBody body = new FormBody.Builder() 
+       .add("token", "YourToken")
+       .add("to", "16315555555")
+       .add("name", "hello_world")
+       .add("language", "en_us")
+       .add("header", "")
+       .add("body", "")
+       .add("buttons", "")
+       .add("priority", "")
+
+       .build();
+
+Request request = new Request.Builder()
+ .url("https://api.alvochat.com/instance1199/messages/template")
+ .post(body)
+ .addHeader("content-type", "application/x-www-form-urlencoded")
+ .build();
+
+Response response = client.newCall(request).execute();
+ 
+System.out.println(response.body().string());
